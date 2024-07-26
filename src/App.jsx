@@ -1,11 +1,12 @@
-import React from 'react'
+import './App.css'
 import SimpleForm from './components/SimpleForm'
 
 const App = () => {
   return (
     <>
-    <h1>App</h1>
-      <SimpleForm/>
+      <div className='app'>
+        <SimpleForm/>
+      </div> 
     </>
 
   )

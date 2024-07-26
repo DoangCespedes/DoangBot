@@ -26,6 +26,34 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const handleCustomWidget = () => {
+    const botMessage = createChatBotMessage(
+      "Aquí tienes tu widget:",
+      {
+        widget: 'myWidget',
+      }
+    );
+
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleCarForm = () => {
+    const botMessage = createChatBotMessage(
+      "Por favor, completa el siguiente formulario:",
+      {
+        widget: 'carForm',
+      }
+    );
+
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
 
   return (
     <div>
@@ -34,6 +62,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleHello,
             handleDog,
+            handleCustomWidget,
+            handleCarForm,
           },
         });
       })}

@@ -11,6 +11,12 @@ const MessageParser = ({ children, actions }) => {
     if (message.includes('dog')) {
       actions.handleDog();
     }
+    if (message.includes("widget")) {
+      actions.handleCustomWidget();
+    }
+    if (message.includes("formulario")) {
+      actions.handleCarForm();
+    }
   };
 
   return (
